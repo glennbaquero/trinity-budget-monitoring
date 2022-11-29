@@ -1,0 +1,20 @@
+@import './web/_variables.scss';
+@import './web/general.scss';
+@import './web/styles.scss';
+@import './helpers/transitions.scss';
+@import 'styles.scss';
+
+html {
+    font-size: 14px;
+}
+
+body {
+	background-color: #fafafa;
+	overflow-x: hidden;
+	font-family: $font--primary;
+}
+
+.form-control:disabled {
+	background-color: #cac9c9;
+	color: #f5f5f5;
+}

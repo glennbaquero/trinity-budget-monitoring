@@ -1,0 +1,330 @@
+/*****
+** HEADER
+*****/
+.frm-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	width: 100%;
+	height: 40px;
+	background: #47C94D;
+}
+
+/*****
+** SIDEBAR
+*****/
+.frm-sidebar__header p {
+	line-height: normal;
+	font-size: 16px;
+	color: #fff;
+	font-weight: bold;
+	margin-block-end: 0;
+	font-family: 'Inter', sans-serif;
+}
+
+.frm-sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding-top: 75px;
+	width: 16.6666666667%;
+	height: 100vh;
+	background: #2b2b2b;
+
+	* { color: #fff; }
+}
+
+.frm-sidebar__avatar {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	overflow: hidden;
+}
+
+.frm-sidebar__main-nav {
+	background: #1C1C1C;
+	padding: 8px 16px;
+	margin: 0px -0.5em 10px;
+
+	* { 
+		font-size: 11.2px; 
+		color: #fff;
+	}
+}
+
+.frm-cntnt {
+	padding: 0 16px;
+	padding-right: 12px;
+
+	a {
+		margin-bottom: 10px;
+	}
+
+	h5 { 
+		margin-bottom: 0; 
+		margin-block-start: 0;
+	    margin-block-end: 0;
+	}
+
+	.frm-sidebar__icon {
+		position: relative;
+		width: 15px;
+		// height: 15px;
+		margin-right: 18px;
+	}
+
+	.frm-sidebar__name {
+		&.active h5 {
+			font-weight: bold;
+		}
+	}
+}
+
+
+/*****
+** MAIN CONTENT
+*****/
+
+.frm-main__header {
+	font-size: 11.2px;
+	font-weight: bold;
+	font-family: 'Inter', sans-serif;
+}
+
+.frm-main {
+	padding: 32px 42px !important;
+	padding-top: 76px !important
+}
+
+
+/*****
+** LOGIN
+*****/
+
+.frm-login {
+	position: relative;
+	width: 75%;
+	height: 100vh;
+	overflow: hidden;
+
+	&.login-box {
+		width: 100%;
+		animation: none;
+
+		.card {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	.card {
+		width: 31vw;
+		padding: 5vh 4vw;
+		margin-left: 10vw;
+	}
+
+	.frm-login__logo-hldr {
+		position: relative;
+		width: 100%;
+		height: 92px;
+		margin-bottom: 20px;
+	}
+}
+
+.frm-bckgrnds {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	&.bring--front {
+		z-index: -1;
+	}
+	&.bring--back {
+		z-index: -2;
+	}
+	&.size--cover {
+		background-size: cover;
+	}
+	&.size--contain{
+		background-size: contain;
+	}
+	&.align-r {
+		background-position: center right;
+	}
+	&.align-l {
+		background-position: center left;
+	}
+	&.align-c {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	&.align-t {
+		background-position: center top;
+	}
+	&.align-b {
+		background-position: center bottom;
+	}
+}
+
+.frm-svg {
+	position: absolute;
+	left: auto;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 47vw;
+	height: 100%;
+
+	&.frm-svg__manager {
+		width: 55vw;
+		z-index: -2;
+
+		svg {
+			width: 100%;
+		}
+	}
+
+	svg {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		height: 100%;
+		width: 80%;
+	}
+}
+
+
+#rotate-365 {
+	transform-origin: center;
+	transform-box: fill-box;
+	-webkit-animation: rotation 10s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(359deg);
+	}
+}
+
+#rotate-reverse-365 {
+	transform-origin: center;
+	transform-box: fill-box;
+	-webkit-animation: reverse_rotation 15s infinite linear;
+}
+
+@-webkit-keyframes reverse_rotation {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(-359deg);
+	}
+}
+
+.frm-login {
+	transform-origin: center;
+	transform-box: fill-box;
+	-webkit-animation: login_bg 1s ease-in-out;
+}
+
+@-webkit-keyframes login_bg {
+	from {
+		width: 70%;
+	}
+	to {
+		width: 75%;
+	}
+}
+
+#move-hair,
+#move-leaves,
+#move-up-down,
+#move-left-right,
+#move-right-left {
+	transform-origin: center;
+	transform-box: fill-box;
+	-webkit-animation: hair 2s ease-in-out infinite alternate;
+}
+
+#move-leaves {
+	-webkit-animation: leaves 2s ease-in-out infinite alternate;
+}
+
+#move-up-down {
+	-webkit-animation: up-down 2s ease-in-out infinite alternate;
+}
+
+#move-left-right {
+	-webkit-animation: left-right 2s ease-in-out infinite alternate;
+}
+
+#move-right-left {
+	-webkit-animation: right-left 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes hair {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(8deg);
+	}
+}
+
+@-webkit-keyframes leaves {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(-8deg);
+	}
+}
+
+@-webkit-keyframes up-down {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(3px);
+	}
+}
+
+@-webkit-keyframes left-right {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(10px);
+	}
+}
+
+@-webkit-keyframes right-left {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-10px);
+	}
+}
+
+// DOWNLOAD
+.frm-download {
+	* {
+		font-family: $font--primary;
+	}
+	input {
+		padding: 9px 16px;
+		font-size: 14px;
+	}
+}
